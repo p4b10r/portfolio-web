@@ -5,7 +5,7 @@
 }
 
 body{
-  background: #f3f3f3;
+  background: #EAEAEA;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -14,7 +14,7 @@ a{
 }
 
 .contenedor{
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   margin: auto;
 }
@@ -23,15 +23,18 @@ a{
 
 header{
   padding: 40px 0;
+  background-color:#2F2F2F;
 }
 
 header .logo{
   text-align: center;
   margin-bottom: 40px;
+  color: #E5E5E5;
+
 }
 
 header .logo p{
-  color: #9b9b9b;
+  color: #C2C2C2;
 }
 
 header form{
@@ -46,7 +49,7 @@ header .barra-busqueda{
   height: 40px;
   line-height: 40px;
   background: #fff;
-  padding: 0 20px;
+  padding: 0 10px;
   border-radius: 100px;
   border: none;
   text-align: center;
@@ -68,7 +71,7 @@ header .categorias a{
 }
 
 header .categorias a.activo{
-  color:#000;
+  color:#fff;
 }
 
 /*GRID*/
@@ -100,8 +103,10 @@ header .categorias a.activo{
 }
 
 .grid .item img{
-  width: 200px;
-  height: 200px;
+  /*width: 200px;*/
+  /*height: 200px;*/
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   cursor: pointer;
   vertical-align: top;
@@ -132,16 +137,18 @@ header .categorias a.activo{
 }
 
 .over-lay img{
-  max-width: 100%
+  max-width: 390px;
 }
 
 .over-lay .descripcion{
   display: block;
   background: #fff;
-  text-align: center;
+  text-align: justify;
+  line-height: 1.5;
   margin-top: 5px;
+  padding: 30px;
   border-radius: 10px;
-  max-width: 50%;
+  width:330px;
 }
 
 .contenedor img{
@@ -158,6 +165,43 @@ header .categorias a.activo{
   right:0;
   top: 0;
 }
+
+
+
+/*PARRAFO*/
+
+.sobre-mi {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  position:relative;
+  padding: 40px 0;
+}
+
+.sobre-mi p {
+
+  width: 100%;
+  line-height: 2;
+
+  text-align: justify;
+}
+
+.curriculum{
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  position:relative;
+  padding: 40px 0;
+}
+
+.curriculum p {
+
+  width: 100%;
+  line-height: 2;
+
+  text-align: justify;
+}
+
 
 
 /* footer */

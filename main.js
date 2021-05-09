@@ -1,4 +1,4 @@
-var grid=new Muuri(".grid",{
+const grid=new Muuri(".grid",{
   layout:{
     rounding:false
   }
@@ -7,7 +7,7 @@ var grid=new Muuri(".grid",{
 
 
 const removeAccents = (str) => {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  return str.normalize("NFD").replace(/([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+/gi,"$1");
 }
 
 window.addEventListener("load",()=>{
@@ -20,6 +20,7 @@ window.addEventListener("load",()=>{
       evento.preventDefault();
       enlaces.forEach((enlace)=> enlace.classList.remove("activo"));
       evento.target.classList.add("activo");
+
 
       const categoria=removeAccents(evento.target.innerHTML.toLowerCase());
       categoria==="todos"? grid.filter('[data-categoria]'): grid.filter(`[data-categoria="${categoria}"]`);
